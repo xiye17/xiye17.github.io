@@ -4,7 +4,7 @@ body {
 }
 
 #bio > p > a {
-    color: #66b3ff;
+    color: #2E86C1;
     text-decoration: none;
 }
 
@@ -19,4 +19,26 @@ body {
 
 .pub > a:hover {
     text-decoration: underline;
+}
+
+#pic {
+    margin-left:10px;
+    float: right;
+    height: 230;
+}
+
+@media (min-width: 960px) {
+    body {
+        margin: 0% 30% 0% 30%;
+    }
+}
+
+
+@media (max-width: 960px) {
+    body {
+        margin: 0% 5% 0% 5%;
+    }
+    #pic {
+        width: 45%;
+    }
 }
