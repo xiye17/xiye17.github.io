@@ -1,3 +1,8 @@
+
+html * {
+    font-family: Helvetica, sans-serif;
+}
+
 body {
     background-color: #f2f2f2;
     color: #333333;
@@ -18,9 +23,22 @@ body {
 }
 
 .pub > a:hover {
+    color: #54a2d6;
     text-decoration: underline;
 }
 
+.pub {
+    font-family: Helvetica;
+}
+
+.conf {
+    font-style: italic;
+}
+
+footer {
+    color: gray;
+    font-size: medium;
+}
 #pic {
     margin-left:10px;
     float: right;
