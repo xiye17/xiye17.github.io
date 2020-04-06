@@ -27,7 +27,13 @@ body {
     text-decoration: underline;
 }
 
+.authors {
+    padding: 0px;
+    margin: 0px;
+}
+
 .pub {
+    font-size: medium;
     font-family: Helvetica;
 }
 
@@ -37,8 +43,9 @@ body {
 
 footer {
     color: gray;
-    font-size: medium;
+    font-size: smaller;
 }
+
 #pic {
     margin-left:10px;
     float: right;
