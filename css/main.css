@@ -8,6 +8,15 @@ body {
     color: #333333;
 }
 
+#bio > p > .fa {
+    font-size: large;
+} 
+
+
+#bio > p > a > .fa-clickable {
+    font-size: larger;
+} 
+
 #bio > p > a {
     color: #2E86C1;
     text-decoration: none;
