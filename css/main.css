@@ -26,6 +26,11 @@ body {
     text-decoration: underline;
  }
 
+/* .pub_div > p {
+    margin: 0px;
+    padding: 0px;
+} */
+
 .pub > a {
     color: #333333;
     text-decoration: none;
@@ -78,7 +83,7 @@ footer {
 
 @media (min-width: 960px) {
     body {
-        margin: 0% 25% 0% 25%;
+        margin: 0% 20% 0% 20%;
     }
 }
 
