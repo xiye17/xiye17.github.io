@@ -31,6 +31,15 @@ body {
     padding: 0px;
 } */
 
+h2 {
+    /* padding-bottom: 0; */
+    margin-bottom: 10px;
+}
+
+.inforow {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
 .pub > a {
     color: #333333;
     text-decoration: none;
@@ -41,9 +50,16 @@ body {
     text-decoration: underline;
 }
 
+.title {
+    padding-bottom: 5px;
+    margin: 0px;
+}
+
 .authors {
     padding: 0px;
     margin: 0px;
+    color: #707070;
+    /* color: #54a2d6; */
 }
 
 .pub {
