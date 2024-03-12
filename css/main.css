@@ -31,14 +31,15 @@ body {
     padding: 0px;
 } */
 
-h2 {
+h3 {
     /* padding-bottom: 0; */
     margin-bottom: 10px;
 }
 
 .inforow {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    font-size: 0.95em;
 }
 .pub > a {
     color: #333333;
@@ -51,7 +52,7 @@ h2 {
 }
 
 .title {
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     margin: 0px;
 }
 
@@ -59,11 +60,14 @@ h2 {
     padding: 0px;
     margin: 0px;
     color: #707070;
+    font-size: 0.95em;
     /* color: #54a2d6; */
 }
 
 .pub {
-    font-size: medium;
+    /* font-size: small; */
+        font-size: 0.95em;
+
     font-family: Helvetica;
     font-weight: bold;
 }
