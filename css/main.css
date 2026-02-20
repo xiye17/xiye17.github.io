@@ -118,3 +118,33 @@ footer {
         height: 40%;
     }
 }
+
+.pub-toggle {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.pub-toggle-btn {
+    cursor: pointer;
+    color: #aaaaaa;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+}
+
+.pub-toggle-btn.active {
+    color: #2E86C1;
+    font-weight: bold;
+}
+
+.pub-toggle-btn:hover {
+    color: #2E86C1;
+}
+
+.pub-legend {
+    font-size: 0.8em;
+}
+
+#pub-section.selected-only .pub_div:not(.selected) {
+    display: none;
+}
