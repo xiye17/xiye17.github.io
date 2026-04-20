@@ -26,6 +26,15 @@ body {
     text-decoration: underline;
  }
 
+#prosective-section a {
+    color: #2E86C1;
+    text-decoration: none;
+}
+
+#prosective-section a:hover {
+    text-decoration: underline;
+}
+
 /* .pub_div > p {
     margin: 0px;
     padding: 0px;
@@ -119,32 +128,6 @@ footer {
     }
 }
 
-.pub-toggle {
-    margin-top: 4px;
-    margin-bottom: 8px;
-    font-size: 1.05em;
-}
-
-.pub-toggle-btn {
-    cursor: pointer;
-    color: #aaaaaa;
-    text-decoration: none;
-    font-family: Helvetica, sans-serif;
-}
-
-.pub-toggle-btn.active {
-    color: #2E86C1;
-    font-weight: bold;
-}
-
-.pub-toggle-btn:hover {
-    color: #2E86C1;
-}
-
 .pub-legend {
     font-size: 0.8em;
-}
-
-#pub-section.selected-only .pub_div:not(.selected) {
-    display: none;
 }
