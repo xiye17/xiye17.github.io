@@ -26,13 +26,119 @@ body {
     text-decoration: underline;
  }
 
-#prosective-section a {
+#prospective-section a {
     color: #2E86C1;
     text-decoration: none;
 }
 
-#prosective-section a:hover {
+#prospective-section a:hover {
     text-decoration: underline;
+}
+
+.site-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+.site-tabs a,
+.site-tabs button {
+    background: none;
+    border: 0;
+    color: #2E86C1;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0;
+    text-decoration: none;
+}
+
+.site-tabs a:hover,
+.site-tabs button:hover {
+    color: #54a2d6;
+    text-decoration: underline;
+}
+
+.home-link {
+    color: #2E86C1;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+.lab-header {
+    align-items: center;
+    display: flex;
+    gap: 14px;
+}
+
+.lab-header img {
+    height: 90px;
+    object-fit: contain;
+    width: 90px;
+}
+
+.lab-header h2 {
+    margin: 0;
+}
+
+.lab-members {
+    margin: 20px 0;
+}
+
+.lab-members h4 {
+    margin-bottom: 4px;
+}
+
+.lab-members p {
+    margin-top: 4px;
+}
+
+.faculty-name {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 12px;
+    max-width: 800px;
+}
+
+.student-card {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.student-card h4,
+.student-card p {
+    margin: 0;
+}
+
+.student-card h4 {
+    white-space: nowrap;
+}
+
+.lab-members a,
+.student-card h4 a {
+    color: #2E86C1;
+    text-decoration: none;
+}
+
+.lab-members a:hover,
+.student-card h4 a:hover {
+    text-decoration: underline;
+}
+
+.student-card p {
+    color: #707070;
+    font-size: 0.95em;
+    line-height: 1.5;
 }
 
 /* .pub_div > p {
