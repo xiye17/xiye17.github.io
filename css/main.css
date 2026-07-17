@@ -156,6 +156,11 @@ h3 {
     margin-bottom: 2px;
     font-size: 0.95em;
 }
+
+.ta-note {
+    color: #c0392b;
+    font-weight: bold;
+}
 .pub > a {
     color: #333333;
     text-decoration: none;
