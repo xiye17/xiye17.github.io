@@ -1,0 +1,116 @@
+:root {
+    --ink: #222;
+    --muted: #555;
+    --accent: #002b52;
+    --line: #c9c9c9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background: #fff;
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+main {
+    margin: 42px auto 64px;
+    max-width: 820px;
+    padding: 0 28px;
+}
+
+nav {
+    border-bottom: 1px solid var(--line);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 27px;
+    padding-bottom: 12px;
+}
+
+nav a {
+    margin-right: 24px;
+    text-decoration: none;
+}
+
+nav a:hover, nav a.current { text-decoration: underline; }
+nav a.current { color: var(--ink); font-weight: 700; }
+
+h1, h2, h3 { line-height: 1.2; }
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0 0 18px;
+    padding-bottom: 0;
+}
+
+h2 { color: var(--accent); font-size: 1.25rem; margin: 0 0 10px; }
+h3 { font-size: 1rem; margin: 0 0 4px; }
+p { margin: 0 0 12px; }
+a { color: var(--accent); }
+
+.term {
+    color: var(--accent);
+    font-family: Arial, sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+
+section { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 20px; }
+
+.course-details {
+    display: block;
+    margin-top: 26px;
+    padding-top: 17px;
+}
+
+.course-details div { margin: 5px 0; }
+.course-details strong { display: inline-block; min-width: 105px; }
+
+.grading-list { margin: 10px 0 24px; padding-left: 22px; }
+.grading-list li { margin: 4px 0; }
+.grading-list + h3, .grading-list ~ h3 { margin-top: 20px; }
+
+.syllabus-note {
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    margin: 34px 0 0;
+    padding-top: 20px;
+}
+
+.back-link { font-weight: 600; text-decoration: none; }
+
+.table-wrap { overflow-x: auto; }
+
+table {
+    border-collapse: collapse;
+    margin-top: 17px;
+    min-width: 540px;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--line);
+    padding: 8px 11px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th { background: #f2f2f2; font-family: Arial, sans-serif; font-size: .85rem; }
+td:first-child { text-align: center; width: 12%; }
+.note { color: var(--muted); font-size: .9em; }
+.no-class td { color: var(--muted); font-style: italic; }
+
+@media (max-width: 640px) {
+    body { font-size: 16px; }
+    main { margin: 28px auto 42px; padding: 0 20px; }
+    h1 { font-size: 1.65rem; }
+}
