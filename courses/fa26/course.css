@@ -24,15 +24,17 @@ main {
 
 nav {
     border-bottom: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
     font-family: Arial, sans-serif;
     font-size: 1rem;
     font-weight: 600;
+    gap: 8px 24px;
     margin-bottom: 27px;
     padding-bottom: 12px;
 }
 
 nav a {
-    margin-right: 24px;
     text-decoration: none;
 }
 
@@ -86,6 +88,9 @@ section { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 20px
     padding-top: 20px;
 }
 
+.full-syllabus-link { margin: -7px 0 0; }
+.full-syllabus-link a { font-weight: 600; }
+
 .back-link { font-weight: 600; text-decoration: none; }
 
 .table-wrap { overflow-x: auto; }
@@ -106,6 +111,8 @@ th, td {
 
 th { background: #f2f2f2; font-family: Arial, sans-serif; font-size: .85rem; }
 td:first-child { text-align: center; width: 12%; }
+.office-hours-table td:first-child { text-align: left; width: auto; }
+.office-hours-table td:nth-child(2) { white-space: nowrap; }
 .note { color: var(--muted); font-size: .9em; }
 .no-class td { color: var(--muted); font-style: italic; }
 
