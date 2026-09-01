@@ -36,28 +36,84 @@ body {
 }
 
 .site-tabs {
+    align-items: flex-end;
+    border-bottom: 1px solid #cfd7dd;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 18px 0;
+    gap: clamp(16px, 3vw, 30px);
+    margin: 18px 0 30px;
 }
 
 .site-tabs a,
 .site-tabs button {
-    background: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
     border: 0;
-    color: #216a9b;
+    border-bottom: 3px solid transparent;
+    color: #5b6770;
     cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 0;
+    font-family: inherit;
+    font-size: 1.08em;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 -1px;
+    padding: 10px 1px 9px;
+    position: relative;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .site-tabs a:hover,
 .site-tabs button:hover {
-    color: #397fae;
-    text-decoration: underline;
+    background: transparent;
+    color: #216a9b;
+    text-decoration: none;
+}
+
+.site-tabs .active,
+.site-tabs button[aria-expanded="true"] {
+    border-bottom-color: #216a9b;
+    color: #216a9b;
+}
+
+.site-tabs .active:hover,
+.site-tabs button[aria-expanded="true"]:hover {
+    background: transparent;
+    color: #216a9b;
+}
+
+.site-tabs a:focus-visible,
+.site-tabs button:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid #216a9b;
+    outline-offset: 3px;
+}
+
+.home-disclosure {
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.home-disclosure summary {
+    color: #216a9b;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: bold;
+    padding: 11px 14px;
+}
+
+.home-disclosure[open] summary {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.prospective-content {
+    padding: 12px 14px 14px;
+}
+
+.prospective-content p:last-child {
+    margin-bottom: 0;
 }
 
 .home-link {
@@ -157,10 +213,6 @@ h3 {
     font-size: 0.95em;
 }
 
-.ta-note {
-    color: #c0392b;
-    font-weight: bold;
-}
 .pub > a {
     color: #333333;
     text-decoration: none;
@@ -236,6 +288,18 @@ footer {
         margin-left:10px;
         width: 40%;
         height: 40%;
+    }
+}
+
+@media (max-width: 620px) {
+    .site-tabs {
+        gap: 13px;
+        overflow-x: auto;
+    }
+
+    .site-tabs a,
+    .site-tabs button {
+        font-size: 0.98em;
     }
 }
 

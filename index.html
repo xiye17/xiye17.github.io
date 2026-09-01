@@ -11,10 +11,17 @@
 </head>
 
 <body>
-    <h2>Xi Ye <br> 叶曦 </h2>
-    <img id="pic" src="./avatar.jpeg" width="200px" height="200px" />
+    <nav class="site-tabs" aria-label="Site sections">
+        <a id="home-tab" class="active" href="index.html" aria-current="page">Home</a>
+        <a href="lab.html">Lab &amp; Publications</a>
+        <button id="services-toggle" type="button" aria-controls="services-section" aria-expanded="false">Teaching &amp; Services</button>
+    </nav>
 
-    <div id="bio">
+    <div id="home-section" aria-labelledby="home-tab">
+        <h2>Xi Ye <br> 叶曦 </h2>
+        <img id="pic" src="./avatar.jpeg" width="200px" height="200px" />
+
+        <div id="bio">
 
         <p><i class="fa fa-envelope"></i> Email: xi.ye [at] ualberta.ca</p>
         <p><i class="fa fa-map-marker"></i> Office: University Commons, 7-253</p>
@@ -32,15 +39,18 @@
         <p> I study language models: how they reason, and how to enable deeper, more general, and more reliable thinking. My work spans post-training, inference techniques, and evaluation benchmarks. Lately, I'm especially interested in general-purpose reasoning models and long-context reasoning.</p>
 
          <p><span style="font-size: larger;">📣 </span> <b>Prospective Students and Visitors</b>: please see <a id="prospective-announcement" href="#prospective-section">here</a>.</p>
-         <p><span style="font-size: larger;">📣 </span> I’ll teach <a href="courses/fa26/index.html">CMPUT 267: Machine Learning I</a> in Fall 2026. <span class="ta-note">TAs have been assigned, and I am not looking for TAs.</span></p>
 
-    </div> 
+        </div>
 
-    <nav class="site-tabs" aria-label="Site sections">
-        <a href="lab.html">[ Lab &amp; Publications ]</a>
-        <button id="services-toggle" type="button" aria-controls="services-section" aria-expanded="false">[ Teaching &amp; Services ]</button>
-        <button id="prospective-toggle" type="button" aria-controls="prospective-section" aria-expanded="false">[ Prospective Students &amp; Visitors ]</button>
-    </nav>
+        <details id="prospective-section" class="home-disclosure">
+            <summary>Prospective Students &amp; Visitors</summary>
+            <div class="prospective-content">
+                <p class="inforow"><b>Prospective MSc/PhD Students:</b> Please email me at <u>xi.ye@ualberta.ca</u> and include <b>"Fall 27 Prospective Student"</b> in the email subject line. I am recruiting 1-2 <b>fully funded MSc/PhD students</b> in the upcoming cycle. Please note that our MSc program is fully research based and fully funded (same as the first 2 years in a PhD program), and our PhD program is short (3 - 4 years). So we do not directly take bachelor students as PhD students.<br></p>
+                <p class="inforow"><b>Undergrad Students at U Alberta and (Remote) Interns:</b> Please fill out this <a href="https://forms.gle/DRvQYpnhdDhF5yC27">Google Form</a>.</p>
+                <p class="inforow">(Due to large number of inquiries, I am not able to respond to all requests.)</p>
+            </div>
+        </details>
+    </div>
 
     <div id="pub-section" hidden aria-hidden="true">
 
@@ -409,9 +419,9 @@
         <p class="inforow"> [11/2022] On Unreliability of Explanations in Prompting @ AI4LIFE group, Harvard.</p>
         <p class="inforow"> [06/2022] On Calibration using Explanations @ NeuLab group, CMU. </p>
     </div> -->
-    <div id="services-section" hidden>
+    <div id="services-section" aria-labelledby="services-toggle" hidden>
         <h3>Teaching</h3>
-        <p class="inforow">Fall 2026: <a href="courses/fa26/index.html">CMPUT 267: Machine Learning I</a>. <span class="ta-note">TAs have been assigned, and I am not looking for TAs.</span></p>
+        <p class="inforow">Fall 2026: <a href="courses/fa26/index.html">CMPUT 267: Machine Learning I</a>.</p>
 
         <h3>Service</h3>
         <p class="inforow"> <b>Senior Area Chair:</b> EMNLP (25)</p>
@@ -420,38 +430,37 @@
         <p class="inforow"> <b>Workshop Organizer:</b> NLRSE Workshop @ ACL24.</p>
         <p class="inforow"> <b>Tutorial Speaker:</b> NLRSE Workshop @ ACL24.</p>
     </div>
-    <div id="prospective-section" hidden>
-        <h3>Notes for Prospective Students and Visitors</h3>
-        <p class="inforow"><b>Prospective MSc/PhD Students:</b> Please email me at <u>xi.ye@ualberta.ca</u> and include <b>"Fall 27 Prospective Student"</b> in the email subject line. I am recruiting 1-2 <b>fully funded MSc/PhD students</b> in the upcoming cycle. Please note that our MSc program is fully research based and fully funded (same as the first 2 years in a PhD program), and our PhD program is short (3 - 4 years). So we do not directly take bachelor students as PhD students.<br></p> 
-        <p class="inforow"><b>Undergrad Students at U Alberta and (Remote) Interns:</b> Please fill out this <a href="https://forms.gle/DRvQYpnhdDhF5yC27">Google Form</a>.</p>
-        <p class="inforow">(Due to large number of inquiries, I am not able to respond to all requests.)</p><br>
-    </div>
-
     <script>
+        const homeTab = document.getElementById('home-tab');
+        const homeSection = document.getElementById('home-section');
         const servicesToggle = document.getElementById('services-toggle');
         const servicesSection = document.getElementById('services-section');
-        const prospectiveToggle = document.getElementById('prospective-toggle');
         const prospectiveSection = document.getElementById('prospective-section');
         const prospectiveAnnouncement = document.getElementById('prospective-announcement');
 
-        function toggleSection(button, section) {
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            button.setAttribute('aria-expanded', String(!isExpanded));
-            section.hidden = isExpanded;
+        function showServices() {
+            homeSection.hidden = true;
+            servicesSection.hidden = false;
+            homeTab.classList.remove('active');
+            homeTab.removeAttribute('aria-current');
+            servicesToggle.setAttribute('aria-expanded', 'true');
         }
 
-        servicesToggle.addEventListener('click', () => toggleSection(servicesToggle, servicesSection));
-        prospectiveToggle.addEventListener('click', () => toggleSection(prospectiveToggle, prospectiveSection));
-        prospectiveAnnouncement.addEventListener('click', () => {
-            if (prospectiveSection.hidden) {
-                prospectiveToggle.setAttribute('aria-expanded', 'true');
-                prospectiveSection.hidden = false;
-            }
+        servicesToggle.addEventListener('click', () => {
+            showServices();
+            window.history.replaceState(null, '', '#services-section');
         });
+        prospectiveAnnouncement.addEventListener('click', () => {
+            prospectiveSection.open = true;
+        });
+
+        if (window.location.hash === '#services-section') {
+            showServices();
+        }
     </script>
+    <footer>
+        Last updated: 07/2026.
+    </footer>
 </body>
-<footer>
-    Last updated: 07/2026.
-</footer>
 
 </html>
