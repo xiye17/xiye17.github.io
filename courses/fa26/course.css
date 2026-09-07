@@ -113,6 +113,7 @@ th { background: #f2f2f2; font-family: Arial, sans-serif; font-size: .85rem; }
 td:first-child { text-align: center; width: 12%; }
 .office-hours-table td:first-child { text-align: left; width: auto; }
 .office-hours-table td:nth-child(2) { white-space: nowrap; }
+.assignment-table th, .assignment-table td { white-space: nowrap; }
 .note { color: var(--muted); font-size: .9em; }
 .no-class td { color: var(--muted); font-style: italic; }
 
