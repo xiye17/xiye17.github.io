@@ -77,6 +77,15 @@ section { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 20px
 .course-details div { margin: 5px 0; }
 .course-details strong { display: inline-block; min-width: 105px; }
 
+.announcement {
+    background: #f7f7f7;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 18px 20px 8px;
+}
+
+.announcement ul { margin-top: 0; }
+
 .grading-list { margin: 10px 0 24px; padding-left: 22px; }
 .grading-list li { margin: 4px 0; }
 .grading-list + h3, .grading-list ~ h3 { margin-top: 20px; }
