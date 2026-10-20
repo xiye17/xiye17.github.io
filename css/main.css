@@ -160,9 +160,9 @@ body {
 
 .student-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, max(160px, calc((100% - 36px) / 4))), 1fr));
     gap: 12px;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .student-card {
@@ -171,13 +171,17 @@ body {
     padding: 12px;
 }
 
+.student-grid + .student-grid {
+    margin-top: 12px;
+}
+
 .student-card h4,
 .student-card p {
     margin: 0;
 }
 
 .student-card h4 {
-    white-space: nowrap;
+    overflow-wrap: anywhere;
 }
 
 .lab-members a,
